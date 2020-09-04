@@ -6,7 +6,7 @@
 
 ### Responsibilities of this setup
 
-* Install Kubernetes and Docker Packeges.
+* Install Kubernetes, Docker and Helm.
 * Create Kubernetes Cluster
 
 ### How to use?
