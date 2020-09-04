@@ -11,7 +11,7 @@
 
 ### How to use?
 
-1. To fill the information on nodes in the "hosts" file.  
+1. To fill the information on nodes in the "hosts" file. (If you use hetzner_terraform from this project you don't need to fill this file.)  
 
 2. To fill the needed environment variable in the "all" file from the "group_vars" directory.  
 
