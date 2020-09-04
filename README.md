@@ -29,8 +29,7 @@ In this project, we will deploy the elastic stack in Kubernetes. We will use the
     output.logstash:
       hosts: ["elastic-stack-logstash:5044"]
   indexTemplateLoad:
-    - elastic-stack-elasticsearch-client:9200
-    
+    - elastic-stack-elasticsearch-client:9200  
   ```
  In `elastic-stack/charts/logstash/values.yaml`
 
@@ -42,5 +41,4 @@ In this project, we will deploy the elastic stack in Kubernetes. We will use the
 
  ```
  $ helm install elastic-stack .
-
  ```
