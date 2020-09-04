@@ -1,0 +1,39 @@
+---
+
+ - name: Setup Pre-Requisites
+   hosts: all
+   become: yes
+   roles:
+     - install_packages
+ 
+ - name: Initialize the Kubernetes Cluster
+   hosts: master
+   become: yes 
+   roles:
+     - init_master
+
+ - name: Install Weave Network
+   hosts: master
+   become: false
+   roles:
+     - install_net
+
+ - name: Generate Join Command
+   hosts: master
+   become: false
+   roles:
+     - generate_kube_join_command
+
+ - name: Join the Nodes
+   hosts: workers
+   become: yes
+   roles:
+     - join_nodes
+
+ - name: Helm Install
+   hosts: master
+   become: yes
+   roles:
+     - helm_install
+     
+

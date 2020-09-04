@@ -1,0 +1,4 @@
+---
+
+ - name: helm install
+   shell: wget https://get.helm.sh/helm-v3.3.0-linux-amd64.tar.gz && tar -xzf helm-v3.3.0-linux-amd64.tar.gz && mv linux-amd64/helm /usr/local/bin/helm

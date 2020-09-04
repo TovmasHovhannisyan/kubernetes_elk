@@ -1,0 +1,13 @@
+---
+
+ - name: Initialize the Kubernetes cluster using kubeadm
+   shell: kubeadm init --pod-network-cidr=10.10.0.0/16
+
+ - name: Setup kubeconfig for vagrant user
+   command: "{{ item }}"
+   with_items:
+    - mkdir -p $HOME/.kube
+    - cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+    - chown $USER:$USER $HOME/.kube/config
+
+
